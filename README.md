@@ -11,7 +11,7 @@ When a guest answers **Yes** and submits the RSVP, the confirmation area shows:
 
 Event details:
 - Saturday, 19 September 2026
-- 20:00–00:00
+- 20:30–30:00
 - Zaimi 45, Glyka Nera, Greece
 - `.ics` reminder: 1 day before
 
