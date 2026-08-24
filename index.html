@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#17130f" />
+  <meta name="description" content="Gina turns 40 — birthday drinks on 19 September 2026 in Glyka Nera." />
+  <title>Gina Turns 40 — Forty & Fabulous</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #17130f;
+      --muted: #6f675f;
+      --cream: #f7f0e5;
+      --paper: #fffaf2;
+      --gold: #b89554;
+      --gold-light: #dfc993;
+      --olive: #67705a;
+      --line: rgba(23, 19, 15, .13);
+      --shadow: 0 24px 70px rgba(52, 39, 23, .14);
+      --radius: 26px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 12%, rgba(223,201,147,.23), transparent 29%),
+        radial-gradient(circle at 90% 5%, rgba(103,112,90,.12), transparent 24%),
+        linear-gradient(180deg, #fbf7f0 0%, #f4ecdf 100%);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .32;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");
+      z-index: 100;
+    }
+
+    a { color: inherit; }
+    button, input, textarea { font: inherit; }
+
+    .sparkles {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .sparkles i {
+      position: absolute;
+      display: block;
+      width: 5px;
+      height: 5px;
+      background: var(--gold);
+      border-radius: 50%;
+      opacity: .24;
+      animation: drift 8s ease-in-out infinite alternate;
+    }
+
+    .sparkles i:nth-child(1) { left: 8%; top: 18%; animation-delay: -1s; }
+    .sparkles i:nth-child(2) { left: 83%; top: 14%; width: 3px; height: 3px; animation-delay: -3s; }
+    .sparkles i:nth-child(3) { left: 92%; top: 43%; animation-delay: -5s; }
+    .sparkles i:nth-child(4) { left: 13%; top: 68%; width: 3px; height: 3px; animation-delay: -2s; }
+    .sparkles i:nth-child(5) { left: 76%; top: 80%; animation-delay: -6s; }
+    .sparkles i:nth-child(6) { left: 48%; top: 9%; width: 3px; height: 3px; animation-delay: -4s; }
+
+    @keyframes drift {
+      to { transform: translate3d(0,-18px,0) scale(1.4); opacity: .55; }
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 36px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero {
+      min-height: 94vh;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: clamp(34px, 7vw, 90px);
+      padding: 64px 0 54px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-size: .76rem;
+      font-weight: 600;
+      color: var(--olive);
+    }
+
+    .eyebrow::before, .eyebrow::after {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1, h2, .script {
+      font-family: "Cormorant Garamond", Georgia, serif;
+    }
+
+    h1 {
+      margin: 0;
+      font-weight: 600;
+      line-height: .84;
+      letter-spacing: -.05em;
+      font-size: clamp(5.4rem, 14vw, 10rem);
+    }
+
+    .hero h1 span {
+      display: block;
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--gold);
+      text-shadow: 0 8px 30px rgba(184,149,84,.14);
+    }
+
+    .subtitle {
+      margin: 20px 0 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.85rem, 4.3vw, 3.15rem);
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .lede {
+      max-width: 610px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      line-height: 1.85;
+      font-size: 1.03rem;
+    }
+
+    .hero-actions {
+      margin-top: 34px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 22px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      font-weight: 600;
+      font-size: .94rem;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      color: #fffaf3;
+      background: var(--ink);
+      box-shadow: 0 12px 24px rgba(23,19,15,.18);
+    }
+    .btn-secondary {
+      color: var(--ink);
+      border: 1px solid var(--line);
+      background: rgba(255,250,242,.65);
+      backdrop-filter: blur(10px);
+    }
+
+    .photo-wrap {
+      position: relative;
+      width: min(100%, 450px);
+      justify-self: center;
+      margin-top: 56px; /* moved slightly down so it does not cover the decorative 40 */
+    }
+
+    .photo-wrap::before {
+      content: "40";
+      position: absolute;
+      right: -48px;
+      top: -70px;
+      z-index: -1;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(8rem, 18vw, 13rem);
+      line-height: 1;
+      color: rgba(184,149,84,.16);
+      font-weight: 600;
+    }
+
+    .photo-frame {
+      aspect-ratio: 4 / 5;
+      border-radius: 180px 180px 28px 28px;
+      overflow: hidden;
+      background:
+        linear-gradient(145deg, rgba(184,149,84,.22), rgba(103,112,90,.14)),
+        #e9ddca;
+      padding: 9px;
+      box-shadow: var(--shadow);
+      transform: rotate(1.3deg);
+    }
+
+    .photo-inner {
+      height: 100%;
+      border-radius: 172px 172px 22px 22px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(145deg, #ede1ce, #d9c7ac);
+      display: grid;
+      place-items: center;
+    }
+
+    .photo-inner::before {
+      content: "G";
+      position: absolute;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 11rem;
+      color: rgba(255,255,255,.58);
+      z-index: 0;
+    }
+
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity .6s ease;
+      pointer-events: none;
+    }
+
+    .slide.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .slide-controls {
+      position: absolute;
+      inset: auto 0 16px 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 12px;
+    }
+
+    .slide-arrow {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.35);
+      background: rgba(23,19,15,.36);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+    }
+
+    .slide-arrow:hover {
+      background: rgba(23,19,15,.52);
+    }
+
+    .slide-dots {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide-dots button {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      border: 0;
+      padding: 0;
+      background: rgba(255,255,255,.55);
+      cursor: pointer;
+    }
+
+    .slide-dots button.active {
+      background: var(--gold-light);
+      transform: scale(1.15);
+    }
+
+    .seal {
+      position: absolute;
+      left: -25px;
+      bottom: 42px;
+      width: 102px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 14px;
+      background: var(--gold);
+      color: white;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.15rem;
+      line-height: 1;
+      transform: rotate(-9deg);
+      box-shadow: 0 10px 24px rgba(184,149,84,.28);
+      z-index: 3;
+    }
+
+    .section {
+      padding: 82px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .section-title .kicker {
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      color: var(--olive);
+      font-weight: 600;
+      font-size: .74rem;
+    }
+
+    .section-title h2 {
+      margin: 9px 0 0;
+      font-size: clamp(2.7rem, 6vw, 4.5rem);
+      font-weight: 500;
+      letter-spacing: -.035em;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background: rgba(255,250,242,.75);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 18px 45px rgba(71,54,35,.07);
+      backdrop-filter: blur(8px);
+    }
+
+    .detail-card {
+      min-height: 220px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(184,149,84,.45);
+      border-radius: 50%;
+      color: var(--gold);
+      font-size: 1.25rem;
+    }
+
+    .detail-card h3 {
+      margin: 30px 0 6px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+    }
+
+    .detail-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .detail-card a {
+      margin-top: 14px;
+      align-self: flex-start;
+      color: var(--olive);
+      font-size: .9rem;
+      font-weight: 600;
+      text-underline-offset: 4px;
+    }
+
+    .countdown-card {
+      margin-top: 18px;
+      padding: 38px 30px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+      background: var(--ink);
+      color: #fffaf3;
+    }
+
+    .countdown-copy h3 {
+      margin: 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 500;
+    }
+
+    .countdown-copy p {
+      margin: 9px 0 0;
+      color: rgba(255,250,243,.62);
+      line-height: 1.6;
+    }
+
+    .countdown {
+      display: flex;
+      gap: 14px;
+    }
+
+    .timebox {
+      min-width: 75px;
+      text-align: center;
+      padding: 13px 10px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 18px;
+      background: rgba(255,255,255,.05);
+    }
+
+    .timebox strong {
+      display: block;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--gold-light);
+    }
+
+    .timebox span {
+      display: block;
+      margin-top: 6px;
+      font-size: .67rem;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      color: rgba(255,255,255,.55);
+    }
+
+    .garden-note {
+      margin-top: 18px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .garden-emoji {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(103,112,90,.12);
+      display: grid;
+      place-items: center;
+      font-size: 2rem;
+    }
+
+    .garden-note h3 {
+      margin: 0 0 5px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.8rem;
+    }
+
+    .garden-note p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .rsvp-shell {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      overflow: hidden;
+    }
+
+    .rsvp-side {
+      padding: 44px;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(223,201,147,.21), transparent 30%),
+        var(--ink);
+      color: #fffaf3;
+      position: relative;
+    }
+
+    .rsvp-side .mini {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .72rem;
+      font-weight: 600;
+    }
+
+    .rsvp-side h2 {
+      margin: 12px 0 16px;
+      font-size: clamp(2.8rem, 5vw, 4.6rem);
+      line-height: .95;
+      font-weight: 500;
+    }
+
+    .rsvp-side p {
+      margin: 0;
+      color: rgba(255,250,243,.68);
+      line-height: 1.75;
+    }
+
+    .rsvp-side .deadline {
+      margin-top: 34px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      font-size: .9rem;
+    }
+
+    .rsvp-form {
+      padding: 42px;
+      background: rgba(255,250,242,.88);
+    }
+
+    .field {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: .86rem;
+      font-weight: 600;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 13px 14px;
+      background: rgba(255,255,255,.72);
+      color: var(--ink);
+      outline: none;
+      transition: border .2s ease, box-shadow .2s ease;
+    }
+
+    input[type="text"]:focus, textarea:focus {
+      border-color: rgba(184,149,84,.65);
+      box-shadow: 0 0 0 4px rgba(184,149,84,.10);
+    }
+
+    textarea {
+      min-height: 105px;
+      resize: vertical;
+    }
+
+    .choice-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .choice {
+      position: relative;
+    }
+
+    .choice input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .choice label {
+      margin: 0;
+      min-height: 64px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      background: rgba(255,255,255,.62);
+      transition: .2s ease;
+    }
+
+    .choice input:checked + label {
+      border-color: var(--gold);
+      background: rgba(223,201,147,.18);
+      box-shadow: inset 0 0 0 1px var(--gold);
+    }
+
+    .companion-block {
+      display: none;
+      padding: 18px;
+      margin: 4px 0 20px;
+      background: rgba(103,112,90,.07);
+      border-radius: 16px;
+    }
+
+    .companion-block.show {
+      display: block;
+      animation: appear .24s ease both;
+    }
+
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(-5px); }
+    }
+
+    .honeypot {
+      position: absolute !important;
+      left: -9999px !important;
+      width: 1px !important;
+      height: 1px !important;
+      overflow: hidden !important;
+    }
+
+    .submit-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 6px;
+    }
+
+    .submit-row .btn {
+      min-width: 155px;
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: .78rem;
+      line-height: 1.45;
+    }
+
+
+    .calendar-success {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(76,87,66,.16);
+    }
+
+    .calendar-success strong {
+      display: block;
+      margin-bottom: 10px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.35rem;
+      color: var(--ink);
+    }
+
+    .calendar-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 10px;
+    }
+
+    .calendar-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 42px;
+      padding: 10px 15px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: .82rem;
+      font-weight: 600;
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .calendar-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .calendar-btn.google {
+      background: var(--ink);
+      color: #fffaf3;
+    }
+
+    .calendar-btn.other {
+      border: 1px solid rgba(76,87,66,.24);
+      background: rgba(255,255,255,.55);
+      color: var(--ink);
+    }
+
+    .calendar-note {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: .74rem;
+      line-height: 1.45;
+    }
+
+    .status {
+      display: none;
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      line-height: 1.55;
+    }
+
+    .status.show { display: block; }
+    .status.success {
+      background: rgba(103,112,90,.12);
+      color: #4c5742;
+    }
+    .status.error {
+      background: rgba(142,61,53,.09);
+      color: #8e3d35;
+    }
+
+
+
+    .invitation-gate {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background:
+        radial-gradient(circle at 25% 20%, rgba(223,201,147,.26), transparent 32%),
+        radial-gradient(circle at 80% 80%, rgba(103,112,90,.13), transparent 28%),
+        linear-gradient(145deg, #fbf7f0, #f1e7d8);
+      transition: opacity .65s ease, visibility .65s ease;
+    }
+
+    .invitation-gate.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .gate-card {
+      width: min(520px, 100%);
+      text-align: center;
+      padding: 54px 30px 48px;
+      position: relative;
+    }
+
+    .gate-small {
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      color: var(--olive);
+      font-size: .72rem;
+      font-weight: 600;
+      margin-bottom: 13px;
+    }
+
+    .gate-card h2 {
+      margin: 0;
+      font-size: clamp(3.5rem, 11vw, 6.3rem);
+      line-height: .86;
+      letter-spacing: -.045em;
+      font-weight: 600;
+    }
+
+    .gate-card h2 span {
+      display: block;
+      margin-top: 14px;
+      color: var(--gold);
+      font-size: .48em;
+      font-style: italic;
+      letter-spacing: 0;
+    }
+
+    .gate-card p {
+      max-width: 390px;
+      margin: 24px auto 28px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .gate-40 {
+      position: absolute;
+      z-index: -1;
+      top: -35px;
+      right: 10px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 11rem;
+      color: rgba(184,149,84,.11);
+      line-height: 1;
+    }
+
+    .gate-button {
+      min-width: 220px;
+      padding: 15px 25px;
+    }
+
+    .gate-music-note {
+      display: block;
+      margin-top: 16px;
+      color: rgba(111,103,95,.75);
+      font-size: .74rem;
+    }
+
+    .music-control {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 90;
+      border: 1px solid rgba(184,149,84,.38);
+      background: rgba(255,250,242,.88);
+      color: var(--ink);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 999px;
+      padding: 10px 14px;
+      box-shadow: 0 10px 30px rgba(52,39,23,.12);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      font-size: .82rem;
+      font-weight: 600;
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .music-control:hover {
+      transform: translateY(-2px);
+      background: rgba(255,250,242,.98);
+    }
+
+    .music-control .music-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--gold);
+      color: white;
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+
+    .music-control.playing .music-icon {
+      animation: musicPulse 1.8s ease-in-out infinite;
+    }
+
+    @keyframes musicPulse {
+      50% { transform: scale(1.12); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 38px 18px 48px;
+      color: var(--muted);
+      font-size: .87rem;
+    }
+
+    footer .script {
+      display: block;
+      font-size: 1.8rem;
+      color: var(--gold);
+      margin-bottom: 7px;
+    }
+
+    .heart { display: inline-block; animation: pulse 1.8s infinite; }
+    @keyframes pulse {
+      50% { transform: scale(1.14); }
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 52px;
+        text-align: center;
+      }
+      .hero-copy { order: 1; }
+      .photo-wrap { order: 2; width: min(83vw, 390px); margin-top: 24px; }
+      .eyebrow, .hero-actions { justify-content: center; }
+      .lede { margin-left: auto; margin-right: auto; }
+      .details-grid { grid-template-columns: 1fr; }
+      .detail-card { min-height: unset; }
+      .countdown-card { grid-template-columns: 1fr; text-align: center; }
+      .countdown { justify-content: center; flex-wrap: wrap; }
+      .rsvp-shell { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { min-height: unset; padding-bottom: 68px; }
+      h1 { font-size: clamp(4.8rem, 25vw, 7rem); }
+      .subtitle { font-size: 2rem; }
+      .photo-wrap::before { right: -10px; top: -48px; }
+      .seal { left: -8px; }
+      .section { padding: 62px 0; }
+      .countdown-card, .garden-note, .rsvp-side, .rsvp-form { padding: 26px 20px; }
+      .garden-note { grid-template-columns: 1fr; text-align: center; }
+      .garden-emoji { margin: 0 auto; }
+      .timebox { min-width: 62px; }
+      .timebox strong { font-size: 1.65rem; }
+      .choice-row { grid-template-columns: 1fr; }
+      .submit-row { flex-direction: column; align-items: stretch; }
+      .slide-controls { bottom: 12px; }
+      .slide-arrow { width: 30px; height: 30px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="invitation-gate" id="invitationGate">
+    <div class="gate-card">
+      <div class="gate-40" aria-hidden="true">40</div>
+      <div class="gate-small">Gina & Shahab & Lucita invite you</div>
+      <h2>GINA<span>Forty & Fabulous</span></h2>
+      <p>A little celebration is waiting for you.</p>
+      <button class="btn btn-primary gate-button" id="enterInvitation" type="button">
+        Open the invitation ✦
+      </button>
+      <span class="gate-music-note">♪ Best enjoyed with sound</span>
+    </div>
+  </div>
+
+  <div class="sparkles" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <!-- Background music: upload a file named "music.mp3" beside index.html -->
+  <audio id="backgroundMusic" preload="auto" loop autoplay>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="music-control" id="musicControl" type="button" aria-label="Play or pause background music">
+    <span class="music-icon">♪</span>
+    <span id="musicLabel">Music</span>
+  </button>
+
+  <main>
+    <section class="wrap hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Gina & Shahab & Lucita invite you</div>
+        <h1>GINA <span>TURNS 40</span></h1>
+        <p class="subtitle">Forty & Fabulous</p>
+        <p class="lede">
+          Ελάτε να χορέψουμε<br>
+          τα πιο ωραία λαϊκά<br>
+          σε σπίτι με μωσαϊκά..<br>
+          με το ρυθμό της μουσικής<br>
+          και με μπλου τζιν Αμερικής<br>
+          μια εφηβεία επιεικής<br>
+          που γίνεται σαράντα…
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#rsvp">RSVP now ✦</a>
+          <a class="btn btn-secondary"
+             href="https://www.google.com/maps/search/?api=1&query=Zaimi%2045%2C%20Glyka%20Nera%2C%20Greece"
+             target="_blank" rel="noopener">Open in Google Maps ↗</a>
+        </div>
+      </div>
+
+      <div class="photo-wrap">
+        <div class="photo-frame">
+          <div class="photo-inner">
+            <div class="slideshow" id="slideshow">
+              <!-- Slides are injected by JavaScript -->
+            </div>
+            <div class="slide-controls" id="slideControls" style="display:none;">
+              <button class="slide-arrow" id="prevSlide" type="button" aria-label="Previous photo">‹</button>
+              <div class="slide-dots" id="slideDots" aria-label="Photo navigation"></div>
+              <button class="slide-arrow" id="nextSlide" type="button" aria-label="Next photo">›</button>
+            </div>
+          </div>
+        </div>
+        <div class="seal">CHEERS<br>TO 40</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-title">
+          <div class="kicker">Save the evening</div>
+          <h2>The details</h2>
+        </div>
+
+        <div class="details-grid">
+          <article class="card detail-card">
+            <div class="icon">◷</div>
+            <div>
+              <h3>Saturday, 19 September</h3>
+              <p>From 20:30 onwards</p>
+            </div>
+          </article>
+
+          <article class="card detail-card">
+            <div class="icon">⌖</div>
+            <div>
+              <h3>Zaimi 45, Glyka Nera</h3>
+              <p>Athens, Greece</p>
+              <a href="https://www.google.com/maps/search/?api=1&query=Zaimi%2045%2C%20Glyka%20Nera%2C%20Greece"
+                 target="_blank" rel="noopener">Get directions ↗</a>
+            </div>
+          </article>
+
+          <article class="card detail-card">
+            <div class="icon">✦</div>
+            <div>
+              <h3>Birthday drinks</h3>
+              <p>Come ready to toast, celebrate and stay a while.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="card countdown-card">
+          <div class="countdown-copy">
+            <h3>Counting down to the celebration</h3>
+            <p>Because turning 40 only happens once.</p>
+          </div>
+          <div class="countdown" aria-label="Countdown to the party">
+            <div class="timebox"><strong id="days">--</strong><span>Days</span></div>
+            <div class="timebox"><strong id="hours">--</strong><span>Hours</span></div>
+            <div class="timebox"><strong id="minutes">--</strong><span>Minutes</span></div>
+            <div class="timebox"><strong id="seconds">--</strong><span>Seconds</span></div>
+          </div>
+        </div>
+
+        <div class="card garden-note">
+          <div class="garden-emoji">🌿</div>
+          <div>
+            <h3>A little garden-party note</h3>
+            <p>
+              We'll be celebrating outdoors, so choose your shoes with the garden terrain
+              in mind — stilettos may have a harder evening than you will.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="rsvp">
+      <div class="wrap">
+        <div class="card rsvp-shell">
+          <div class="rsvp-side">
+            <div class="mini">RSVP</div>
+            <h2>Will you celebrate with us?</h2>
+            <p>
+              Your invitation includes you and one companion. Tell us whether you'll be
+              joining — and leave Gina a little note if you feel like it.
+            </p>
+            <p class="deadline"><strong>Please reply by 10 September 2026.</strong></p>
+          </div>
+
+          <form class="rsvp-form" id="rsvpForm">
+            <div class="field">
+              <label for="name">Your name *</label>
+              <input id="name" name="name" type="text" autocomplete="name" required
+                     placeholder="First and last name">
+            </div>
+
+            <div class="field">
+              <label>Can you make it? *</label>
+              <div class="choice-row">
+                <div class="choice">
+                  <input type="radio" id="yes" name="attending" value="Yes" required>
+                  <label for="yes">Yes, I'll be there 🥂</label>
+                </div>
+                <div class="choice">
+                  <input type="radio" id="no" name="attending" value="No" required>
+                  <label for="no">Sadly, I can't make it</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="companion-block" id="companionBlock">
+              <div class="field" style="margin-bottom:14px">
+                <label>Will your companion join you?</label>
+                <div class="choice-row">
+                  <div class="choice">
+                    <input type="radio" id="companionYes" name="companion" value="Yes">
+                    <label for="companionYes">Yes</label>
+                  </div>
+                  <div class="choice">
+                    <input type="radio" id="companionNo" name="companion" value="No">
+                    <label for="companionNo">No</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field" id="companionNameField" style="display:none; margin-bottom:0">
+                <label for="companionName">Companion's name</label>
+                <input id="companionName" name="companionName" type="text"
+                       placeholder="Optional">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">A note for Gina <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+              <textarea id="message" name="message" placeholder="Birthday wishes, a message, or simply leave this blank..."></textarea>
+            </div>
+
+            <div class="honeypot" aria-hidden="true">
+              <label for="website">Website</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <input type="hidden" name="source" value="Gina 40 Birthday Website">
+
+            <div class="submit-row">
+              <button class="btn btn-primary" id="submitBtn" type="submit">Send RSVP ✦</button>
+              <div class="form-note">Your answer goes directly to Gina & Shahab. & Lucita's guest list.</div>
+            </div>
+
+            <div class="status" id="status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span class="script">Gina turns 40</span>
+    19 September 2026 · Glyka Nera · Made with ♥
+  </footer>
+
+  <script>
+    const RSVP_ENDPOINT = "https://script.google.com/macros/s/AKfycbwFVNyLxMV3PUrVq7RN58c8Ww2FscDT3EUc4A-ulJcUsBFgarU01ECh87CWmT2xAde9/exec";
+    const PARTY_DATE = new Date("2026-09-19T20:30:00+03:00");
+
+    const els = {
+      days: document.getElementById("days"),
+      hours: document.getElementById("hours"),
+      minutes: document.getElementById("minutes"),
+      seconds: document.getElementById("seconds"),
+      form: document.getElementById("rsvpForm"),
+      status: document.getElementById("status"),
+      submit: document.getElementById("submitBtn"),
+      companionBlock: document.getElementById("companionBlock"),
+      companionNameField: document.getElementById("companionNameField"),
+      slideshow: document.getElementById("slideshow"),
+      slideControls: document.getElementById("slideControls"),
+      slideDots: document.getElementById("slideDots"),
+      prevSlide: document.getElementById("prevSlide"),
+      nextSlide: document.getElementById("nextSlide"),
+      backgroundMusic: document.getElementById("backgroundMusic"),
+      musicControl: document.getElementById("musicControl"),
+      musicLabel: document.getElementById("musicLabel"),
+      invitationGate: document.getElementById("invitationGate"),
+      enterInvitation: document.getElementById("enterInvitation")
+    };
+
+    function updateCountdown() {
+      const diff = PARTY_DATE.getTime() - Date.now();
+
+      if (diff <= 0) {
+        els.days.textContent = "00";
+        els.hours.textContent = "00";
+        els.minutes.textContent = "00";
+        els.seconds.textContent = "00";
+        return;
+      }
+
+      const days = Math.floor(diff / 86400000);
+      const hours = Math.floor((diff % 86400000) / 3600000);
+      const mins = Math.floor((diff % 3600000) / 60000);
+      const secs = Math.floor((diff % 60000) / 1000);
+
+      els.days.textContent = String(days).padStart(2, "0");
+      els.hours.textContent = String(hours).padStart(2, "0");
+      els.minutes.textContent = String(mins).padStart(2, "0");
+      els.seconds.textContent = String(secs).padStart(2, "0");
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+
+    /* ==========================================================
+       Invitation entrance
+       The direct button click counts as a user gesture, so browsers
+       allow the MP3 to begin reliably when the invitation opens.
+       ========================================================== */
+
+    function openInvitation() {
+      if (!els.invitationGate) return;
+      els.invitationGate.classList.add("hidden");
+      document.body.classList.add("invitation-open");
+    }
+
+    els.enterInvitation.addEventListener("click", () => {
+      els.backgroundMusic.volume = 0.45;
+
+      // IMPORTANT: play() is called directly inside the click handler.
+      // This keeps the browser's user-activation permission.
+      const playback = els.backgroundMusic.play();
+
+      musicStarted = true;
+      openInvitation();
+
+      if (playback && typeof playback.then === "function") {
+        playback
+          .then(() => {
+            musicStarted = true;
+            setMusicUI();
+          })
+          .catch((error) => {
+            musicStarted = false;
+            setMusicUI();
+            console.log("Music could not start:", error);
+          });
+      }
+    });
+
+    // If this browser permits audible autoplay, skip the entrance
+    // after playback has genuinely begun.
+    els.backgroundMusic.addEventListener("playing", () => {
+      musicStarted = true;
+      setMusicUI();
+      if (els.invitationGate && !els.invitationGate.classList.contains("hidden")) {
+        setTimeout(openInvitation, 450);
+      }
+    });
+
+
+    /* ==========================================================
+       Background music
+       Upload an MP3 named "music.mp3" beside index.html.
+
+       Browsers often block autoplay with sound. We try autoplay,
+       then retry on the visitor's first interaction.
+       ========================================================== */
+
+    let musicStarted = false;
+
+    function setMusicUI() {
+      const playing = els.backgroundMusic && !els.backgroundMusic.paused;
+      els.musicControl.classList.toggle("playing", playing);
+      els.musicLabel.textContent = playing ? "Pause music" : "Play music";
+      els.musicControl.setAttribute(
+        "aria-label",
+        playing ? "Pause background music" : "Play background music"
+      );
+    }
+
+    async function playMusic() {
+      if (!els.backgroundMusic) return false;
+
+      try {
+        els.backgroundMusic.volume = 0.45;
+        await els.backgroundMusic.play();
+        musicStarted = true;
+        setMusicUI();
+        return true;
+      } catch (error) {
+        console.log("Music playback was blocked or failed:", error);
+        setMusicUI();
+        return false;
+      }
+    }
+
+    async function tryStartMusic() {
+      if (musicStarted) return;
+      await playMusic();
+    }
+
+    els.musicControl.addEventListener("click", async (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (els.backgroundMusic.paused) {
+        await playMusic();
+      } else {
+        els.backgroundMusic.pause();
+        setMusicUI();
+      }
+    });
+
+    // Try autoplay when the page is ready.
+    window.addEventListener("load", tryStartMusic, { once: true });
+
+    // If autoplay is blocked, the first genuine user interaction retries.
+    async function startOnFirstInteraction(event) {
+      if (event.target.closest && event.target.closest("#musicControl")) return;
+
+      if (!musicStarted) {
+        const started = await playMusic();
+        if (started) removeFirstInteractionListeners();
+      }
+    }
+
+    function removeFirstInteractionListeners() {
+      document.removeEventListener("pointerdown", startOnFirstInteraction);
+      document.removeEventListener("touchstart", startOnFirstInteraction);
+      document.removeEventListener("keydown", startOnFirstInteraction);
+    }
+
+    document.addEventListener("pointerdown", startOnFirstInteraction);
+    document.addEventListener("touchstart", startOnFirstInteraction);
+    document.addEventListener("keydown", startOnFirstInteraction);
+
+    els.backgroundMusic.addEventListener("play", setMusicUI);
+    els.backgroundMusic.addEventListener("pause", setMusicUI);
+    els.backgroundMusic.addEventListener("error", () => {
+      els.musicLabel.textContent = "Music unavailable";
+      els.musicControl.title = "Check that music.mp3 is uploaded beside index.html";
+    });
+
+    setMusicUI();
+
+
+    document.querySelectorAll('input[name="attending"]').forEach(input => {
+      input.addEventListener("change", () => {
+        const attending = document.querySelector('input[name="attending"]:checked')?.value;
+        const show = attending === "Yes";
+        els.companionBlock.classList.toggle("show", show);
+
+        if (!show) {
+          document.querySelectorAll('input[name="companion"]').forEach(el => el.checked = false);
+          document.getElementById("companionName").value = "";
+          els.companionNameField.style.display = "none";
+        }
+      });
+    });
+
+    document.querySelectorAll('input[name="companion"]').forEach(input => {
+      input.addEventListener("change", () => {
+        const coming = document.querySelector('input[name="companion"]:checked')?.value === "Yes";
+        els.companionNameField.style.display = coming ? "block" : "none";
+        if (!coming) document.getElementById("companionName").value = "";
+      });
+    });
+
+    function showStatus(message, type) {
+      els.status.textContent = message;
+      els.status.className = `status show ${type}`;
+    }
+
+    const GOOGLE_CALENDAR_URL =
+      "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+      "&text=" + encodeURIComponent("GINA TURNS 40 — Forty & Fabulous") +
+      "&dates=20260919T200000/20260920T000000" +
+      "&ctz=" + encodeURIComponent("Europe/Athens") +
+      "&location=" + encodeURIComponent("Zaimi 45, Glyka Nera, Greece") +
+      "&details=" + encodeURIComponent(
+        "Gina's 40th birthday drinks with Gina & Shahab & Lucita. " +
+        "Saturday, 19 September 2026 from 20:30 onwards. " +
+        "Garden party — choose your shoes with the outdoor terrain in mind."
+      );
+
+    function showAttendingSuccess(guestName) {
+      els.status.className = "status show success";
+      els.status.innerHTML = "";
+
+      const message = document.createElement("div");
+      message.textContent =
+        `Perfect${guestName ? ", " + guestName : ""}! 🥂 ` +
+        "Your RSVP has been sent. We can't wait to celebrate together.";
+      els.status.appendChild(message);
+
+      const calendarBox = document.createElement("div");
+      calendarBox.className = "calendar-success";
+
+      const heading = document.createElement("strong");
+      heading.textContent = "Save the party in your calendar";
+      calendarBox.appendChild(heading);
+
+      const actions = document.createElement("div");
+      actions.className = "calendar-actions";
+
+      const googleLink = document.createElement("a");
+      googleLink.className = "calendar-btn google";
+      googleLink.href = GOOGLE_CALENDAR_URL;
+      googleLink.target = "_blank";
+      googleLink.rel = "noopener";
+      googleLink.textContent = "＋ Google Calendar";
+
+      const otherLink = document.createElement("a");
+      otherLink.className = "calendar-btn other";
+      otherLink.href = "gina-40-birthday.ics";
+      otherLink.download = "Gina-40-Birthday.ics";
+      otherLink.textContent = "◷ Apple / Outlook / other";
+
+      actions.appendChild(googleLink);
+      actions.appendChild(otherLink);
+      calendarBox.appendChild(actions);
+
+      const note = document.createElement("div");
+      note.className = "calendar-note";
+      note.textContent =
+        "Google Calendar opens with all party details filled in; press Save to add it. " +
+        "The calendar file includes a reminder 1 day before the party.";
+      calendarBox.appendChild(note);
+
+      els.status.appendChild(calendarBox);
+    }
+
+    els.form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      if (RSVP_ENDPOINT.includes("PASTE_YOUR")) {
+        showStatus("The RSVP form is not connected yet. Gina & Shahab & Lucita need to add the Google Apps Script URL first.", "error");
+        return;
+      }
+
+      const formData = new FormData(els.form);
+      const attending = formData.get("attending");
+
+      if (attending === "Yes" && !formData.get("companion")) {
+        formData.set("companion", "No");
+      }
+      if (attending === "No") {
+        formData.set("companion", "Not applicable");
+        formData.set("companionName", "");
+      }
+
+      els.submit.disabled = true;
+      els.submit.textContent = "Sending…";
+      els.status.className = "status";
+
+      try {
+        await fetch(RSVP_ENDPOINT, {
+          method: "POST",
+          mode: "no-cors",
+          body: new URLSearchParams([...formData.entries()])
+        });
+
+        const guestName = (formData.get("name") || "").trim().split(" ")[0];
+        const yes = attending === "Yes";
+
+        if (yes) {
+          showAttendingSuccess(guestName);
+        } else {
+          showStatus(
+            `Thank you${guestName ? ", " + guestName : ""} for letting us know. You'll be missed!`,
+            "success"
+          );
+        }
+
+        els.form.reset();
+        els.companionBlock.classList.remove("show");
+        els.companionNameField.style.display = "none";
+      } catch (error) {
+        showStatus("Something went wrong while sending your RSVP. Please try again.", "error");
+      } finally {
+        els.submit.disabled = false;
+        els.submit.textContent = "Send RSVP ✦";
+      }
+    });
+
+    /* ==========================================================
+       Photo slideshow
+       Upload your images next to index.html.
+       Supported names:
+       - gina.jpg
+       - gina1.jpg, gina2.jpg, gina3.jpg, gina4.jpg, gina5.jpg
+       The page loads any of these that exist.
+       ========================================================== */
+
+    const candidateImages = [
+      "gina.jpg",
+      "gina1.jpg",
+      "gina2.jpg",
+      "gina3.jpg",
+      "gina4.jpg",
+      "gina5.jpg"
+    ];
+
+    function checkImage(src) {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(src);
+        img.onerror = () => resolve(null);
+        img.src = src;
+      });
+    }
+
+    async function initSlideshow() {
+      const loaded = (await Promise.all(candidateImages.map(checkImage))).filter(Boolean);
+
+      if (!loaded.length) {
+        // No photo uploaded yet: keep the elegant background placeholder only.
+        return;
+      }
+
+      let uniqueImages = [...new Set(loaded)];
+      let current = 0;
+      let autoTimer = null;
+
+      uniqueImages.forEach((src, index) => {
+        const slide = document.createElement("div");
+        slide.className = "slide" + (index === 0 ? " active" : "");
+
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = `Gina photo ${index + 1}`;
+
+        slide.appendChild(img);
+        els.slideshow.appendChild(slide);
+      });
+
+      const slides = [...document.querySelectorAll(".slide")];
+
+      function renderDots() {
+        els.slideDots.innerHTML = "";
+        slides.forEach((_, index) => {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.setAttribute("aria-label", `Go to photo ${index + 1}`);
+          if (index === current) dot.classList.add("active");
+          dot.addEventListener("click", () => {
+            current = index;
+            updateSlides();
+            restartAuto();
+          });
+          els.slideDots.appendChild(dot);
+        });
+      }
+
+      function updateSlides() {
+        slides.forEach((slide, index) => {
+          slide.classList.toggle("active", index === current);
+        });
+        [...els.slideDots.children].forEach((dot, index) => {
+          dot.classList.toggle("active", index === current);
+        });
+      }
+
+      function next() {
+        current = (current + 1) % slides.length;
+        updateSlides();
+      }
+
+      function prev() {
+        current = (current - 1 + slides.length) % slides.length;
+        updateSlides();
+      }
+
+      function startAuto() {
+        if (slides.length <= 1) return;
+        autoTimer = setInterval(next, 4000);
+      }
+
+      function restartAuto() {
+        if (autoTimer) clearInterval(autoTimer);
+        startAuto();
+      }
+
+      if (slides.length > 1) {
+        els.slideControls.style.display = "flex";
+        els.prevSlide.addEventListener("click", () => {
+          prev();
+          restartAuto();
+        });
+        els.nextSlide.addEventListener("click", () => {
+          next();
+          restartAuto();
+        });
+      }
+
+      renderDots();
+      startAuto();
+    }
+
+    initSlideshow();
+  </script>
+</body>
+</html>

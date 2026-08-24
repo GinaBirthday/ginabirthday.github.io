@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Gina 40 Birthday//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:gina40-20260919@gina-birthday
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=Europe/Athens:20260919T203000
+DTEND;TZID=Europe/Athens:20260920T300000
+SUMMARY:GINA TURNS 40 — Forty & Fabulous
+LOCATION:Zaimi 45\, Glyka Nera\, Greece
+DESCRIPTION:Gina's 40th birthday drinks with Gina & Shahab.\nSaturday 19 September 2026 from 20:30 onwards.\nGarden party — choose your shoes with the outdoor terrain in mind.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Gina turns 40 tomorrow!
+END:VALARM
+END:VEVENT
+END:VCALENDAR
