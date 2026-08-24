@@ -1,4 +1,4 @@
-# Gina Turns 40 — RSVP Website v7
+# Gina Turns 40 
 
 This version includes post-RSVP calendar saving.
 
